@@ -1,0 +1,14 @@
+LAST EDIT: DB 1/15/22; 2pm
+
+Minigame 1 -> Map The Way
+Map the Way is a game about Newton and Decarte trying to find their way to the talent show. 
+They will look at a map made up of a bunch of quadrilaterals and they will be given hints about the quadrilaterals to find their way to the talent show. 
+The victory condition of this game is the player successfully deciphering the hints and locating the talent show.
+
+Mechanic:
+0) The game will randomly pick a starting point on the map. With time as a factor, the map may or may not change from game to game. 
+      (Maybe have a few non changing maps and the game picks one when it starts?)
+1) Each turn, the game randomly generates a number from 1 to n (based on now many streets are in the map)
+2) The game gives the player some type of hint, such as "Then we need to go along the left side of the trapazoid"
+3) The player must pick the street that the game is referring to.
+4) Vicotry is acchieved when the player has successfully navigated from the starting point to the finish point. (likely 3-4 correct answers)
