@@ -1,4 +1,4 @@
-LAST EDIT: DB 1/15/22; 2pm
+LAST EDIT: DB 1/22/2022; 2:30pm
 
 Minigame 1 -> Map The Way
 Map the Way is a game about Newton and Decarte trying to find their way to the talent show. 
@@ -12,3 +12,85 @@ Mechanic:
 2) The game gives the player some type of hint, such as "Then we need to go along the left side of the trapazoid"
 3) The player must pick the street that the game is referring to.
 4) Vicotry is acchieved when the player has successfully navigated from the starting point to the finish point. (likely 3-4 correct answers)
+
+Logic: Mathcing using tables.
+            Table 1: Maps- (will pick a map at random at start of game)
+                        Map Label
+                        # Shapes in map (4)
+                        # Pathways in map(m)
+                        # Roadways in map (4)
+            Table 2->n: Pathways of map i- (will pick a random pathway that corresponds the the given map)
+                        Corresponding map #
+                        Path label (labeled by number)
+                        Shapes used in path (labled by number, in order of use)
+                        Roadways used in path (labeled by number, in order by use)
+                        
+             The game will give clues about what roadway to click on using the shapes as context. When the player clicks on a road, the game will check to see if it matches
+             the road it gave clues about. If they player was correct, the game will progress to the next roadway. If the player is incorrect, it will ask them to try again.
+             Based on this being a game for children, the game cannot be failed. The game will continue until all correct answers are given.
+             
+             
+<define> int [n] Maps -> {<map1,map2,..,mapn>}
+<define> int [4] Mapi...n -> {<map#,#shapes,#paths,#roads>}
+<define> int [9] path ji...nm (pathj, mapi) -> {<map#,path#,shapesInPath(1-4),roadsInPath(1-4)>}
+<define> int [4nm] hints<mapi, pathj, road(1-4)> {<hint>}
+
+<defnie> hint(map#,path#,Counter){
+      //The whole purpose of this function is to now what hint to call when. No specific logic, will be hard-coded else-if-else statements.
+      if (map == 1){
+            if (path == 1){
+                  if (counter == 1){
+                        .....
+                  }else if (counter == 2){
+                  .....
+      }else if (map == 2){
+      .....
+      .....
+}
+
+<define> main (null){
+      int map# = rand[n];
+      int path# = rand[m];
+      int [4] shapes = path<map#><path#>[2][3][4][5];
+      int [4] roads = path<map#><path#>[6][7][8][9];
+      bool "correct" = false;
+      int correctCount = 0;
+      
+      while (correct count < 4){
+            correct == false;
+      
+            if (correct count == 0){
+                  hint(map#,path#,Counter);
+                  if(click correct road){
+                        correct = TRUE; Count++;
+                   else break;
+                   
+            }else if (correct count == 1){
+                  hint(map#,path#,Counter);
+                  if(click correct road){
+                        correct = TRUE; Count++;
+                   else break;
+                   
+            }else if (correct count == 2){
+                  hint(map#,path#,Counter);
+                  if(click correct road){
+                        correct = TRUE; Count++;
+                   else break;
+                   
+            }else if (correct count == 3){
+                  hint(map#,path#,Counter);
+                  if(click correct road){
+                        correct = TRUE; Count++;
+                   else break;
+                   
+            }else{ ERROR EXIT}
+            
+            if(correct == false){
+                  sorry, that was the wrong answer}
+            else ignore;
+      }
+      
+      UnlockNextGame();
+      GameExit();           
+}
+      
